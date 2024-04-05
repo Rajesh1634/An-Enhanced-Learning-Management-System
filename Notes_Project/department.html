@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<head>
+    <title> department</title>
+    <style>
+          @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+                *{
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+                }
+                body{
+                    display: inline;
+                    justify-content: center;
+                    align-items: center;
+                    height: 100vh;
+                    background: white;
+                    font-family: 'Raleway', sans-serif;
+                }
+
+                .top{
+                    text-align: center;
+                    color: #03e9f4;
+                    height: 20px;
+                    width: 100%;
+                    display: block;
+                    padding-top: 170px;
+                    font-family: Georgia, 'Times New Roman', Times, serif;
+                    font-size: 50px;
+                }
+
+                .department-container{
+                    background:white;
+                    padding-left: 40px;
+                    padding-right: 40px;
+                    padding-bottom: 50px;
+                    padding-top: 0px;
+
+                }
+
+                .department-button{
+                    display: grid; 
+                    grid-template-columns: 1fr 1fr 1fr ;
+                    column-gap: 16px;
+                    row-gap: 40px;
+                    margin-top: 100px;
+                  
+                }
+
+
+                .department{
+                    background-color: #050801;         
+                    padding-bottom: 70px;
+                    border-radius: 15px;
+                }
+
+                .button-1{
+                  padding: 25px 30px;
+                  background-color: #050801;
+                  color: #03e9f4;
+                  font-weight: bold;
+                  border: none;
+                  border-radius: 15px;
+                  letter-spacing: 4px;
+                  transition: 0.5s;
+                  cursor: pointer;
+                  margin-top: 100px;
+                  margin-left: 50px;
+                  margin-right: 50px;
+                  width: 250px;
+                  height: 100px;
+                
+                  font-family: Georgia, 'Times New Roman', Times, serif;
+                }
+
+                .effect{
+                  color: blue;
+                  text-decoration: none;
+
+                }
+                .button-1:hover{
+                    background:aliceblue;
+                    box-shadow: 0 0 5px #03e9f4,
+                                0 0 25px #03e9f4,
+                                0 0 50px #03e9f4,
+                                0 0 200px #03e9f4;
+                    -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+                }
+
+
+                /*header Section */
+
+              header{
+                z-index: 999;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                background: #23252B;
+                box-shadow: 0 5px 25px rgb(0 0 0 / 20%);
+                padding: 15px 100px;
+                transition: 0.6s;
+              }
+
+              header .logo{
+                color: #fff;
+                font-size: 1.8em;
+                font-weight: 700;
+                text-transform: uppercase;
+                text-decoration: none;
+                letter-spacing: 2px;
+              }
+
+              header .navigation{
+                position: relative;
+                line-height: 75px;
+                transition: 0.6s;
+                transition-property: line-height;
+              }
+
+              header.sticky .navigation{
+                line-height: 60px;
+              }
+
+              header .navigation .menu{
+                position: relative;
+                display: flex;
+                justify-content: center;
+                list-style: none;
+                user-select: none;
+              }
+
+              .menu-item > a{
+                color: #fff;
+                font-size: 1em;
+                text-decoration: none;
+                margin: 20px;
+                padding: 25px 0;
+              }
+
+              .menu-item > a:hover{
+                color: #469DFF;
+                transition: 0.3s;
+              }
+
+              .menu-item .sub-menu{
+                position: absolute;
+                background: #23252B;
+                top: 74px;
+                line-height: 40px;
+                list-style: none;
+                border-radius: 0 0 8px 8px;
+                box-shadow: 0 5px 25px rgb(0 0 0 / 20%);
+                pointer-events: none;
+                transform: translateY(20px);
+                opacity: 0;
+                transition: 0.3s;
+                transition-property: transform, opacity;
+              }
+
+              header.sticky .menu-item .sub-menu{
+                top: 60px;
+              }
+
+              .menu-item:hover .sub-menu{
+                pointer-events: all;
+                transform: translateY(0);
+                opacity: 1;
+              }
+
+              .menu-item .sub-menu .sub-item{
+                position: relative;
+                padding: 7px 0;
+                cursor: pointer;
+                box-shadow: inset 0px -30px 5px -30px rgba(255, 255, 255, 0.2);
+              }
+
+              .menu-item .sub-menu .sub-item a{
+                color: #fff;
+                font-size: 1em;
+                text-decoration: none;
+                padding: 15px 30px;
+              }
+
+              .menu-item .sub-menu .sub-item:hover{
+                background: #4080EF;
+              }
+
+              .menu-item .sub-menu .sub-item:last-child:hover{
+                border-radius: 0 0 8px 8px;
+              }
+
+              .more .more-menu{
+                position: absolute;
+                background: #23252B;
+                list-style: none;
+                top: 0;
+                left: 100%;
+                white-space: nowrap;
+                border-radius: 0 8px 8px 8px;
+                overflow: hidden;
+                pointer-events: none;
+                transform: translateY(20px);
+                opacity: 0;
+                transition: 0.3s;
+                transition-property: transform, opacity;
+              }
+
+              .more:hover .more-menu{
+                pointer-events: all;
+                transform: translateY(0);
+                opacity: 1;
+              }
+
+              .more .more-menu .more-item{
+                padding: 7px 0;
+                box-shadow: inset 0px -30px 5px -30px rgba(255, 255, 255, 0.2);
+                transition: 0.3s;
+              }
+
+              .more .more-menu .more-item:hover{
+                background: #4080EF;
+              }
+
+              .menu-btn{
+                display: none;
+              }
+
+              @media (max-width: 1060px){
+                header .navigation .menu{
+                  position: fixed;
+                  display: block;
+                  background: #23252b;
+                  min-width: 350px;
+                  height: 100vh;
+                  top: 0;
+                  right: -100%;
+                  padding: 90px 50px;
+                  visibility: hidden;
+                  overflow-y: auto;
+                  transition: 0.5s;
+                  transition-property: right, visibility;
+                }
+
+                header.sticky .navigation{
+                  line-height: 75px;
+                }
+
+                header .navigation .menu.active{
+                  right: 0;
+                  visibility: visible;
+                }
+
+                .menu-item{
+                  position: relative;
+                }
+
+                .menu-item .sub-menu{
+                  opacity: 1;
+                  position: relative;
+                  top: 0;
+                  transform: translateX(10px);
+                  background: rgba(255, 255, 255, 0.1);
+                  border-radius: 5px;
+                  overflow: hidden;
+                  display: none;
+                }
+
+                header.sticky .menu-item .sub-menu{
+                  top: 0;
+                }
+
+                .menu-item:hover .sub-menu{
+                  transform: translateX(10px);
+                }
+
+                .menu-item .sub-menu .sub-item{
+                  box-shadow: none;
+                }
+
+                .menu-item .sub-menu .sub-item:hover{
+                  background: none;
+                }
+
+                .menu-item .sub-menu .sub-item a:hover{
+                  color: #4080EF;
+                  transition: 0.3s;
+                }
+
+                .more .more-menu{
+                  opacity: 1;
+                  position: relative;
+                  left: 0;
+                  transform: translateY(0);
+                  background: rgba(255, 255, 255, 0.1);
+                  border-radius: 5px;
+                  display: none;
+                }
+
+                .more .more-menu .more-item{
+                  box-shadow: none;
+                }
+
+                .more .more-menu .more-item:hover{
+                  background: none;
+                }
+
+                .more .more-menu .more-item a{
+                  margin-left: 20px;
+                }
+
+                .close-btn{
+                  position: absolute;
+                  background: url(close.png)no-repeat;
+                  width: 40px;
+                  height: 40px;
+                  background-size: 25px;
+                  background-position: center;
+                  top: 0;
+                  left: 0;
+                  margin: 25px;
+                  cursor: pointer;
+                }
+
+                .menu-btn{
+                  background: url(menu.png)no-repeat;
+                  width: 40px;
+                  height: 40px;
+                  background-size: 30px;
+                  background-position: center;
+                  cursor: pointer;
+                  display: block;
+                }
+
+                header{
+                  padding: 15px 20px;
+                }
+
+                header.sticky{
+                  padding: 10px 20px;
+                }
+              }
+                
+    </style>
+    
+</head>
+
+<body>
+      
+  <header>
+      
+    <img src="Images/logo.jpg" class="logo">
+   <div class="navigation">
+      <ul class="menu">
+        <div class="close-btn"></div>
+        <li class="menu-item"><a href="Home.html">Home</a></li>
+        <li class="menu-item">
+          <a class="sub-btn" href="#">Notes </i></a>
+          
+        </li>
+        <li class="menu-item">
+          <a class="sub-btn" href="#">Programming <i class="fas fa-angle-down"></i></a>
+          <ul class="sub-menu">
+           
+           
+            <li class="sub-item more">
+              <a class="more-btn" href="C_program"> C  <i class="fas fa-angle-right"></i></a>
+              <ul class="more-menu">
+                <li class="more-item"><a href="c_program(1).html">Level-1</a></li>
+                <li class="more-item"><a href="c_program(2).html">Level-2</a></li>
+                <li class="more-item"><a href="c_program(3).html">Level-3</a></li>
+              </ul>
+            </li>
+
+
+
+            <li class="sub-item more">
+              <a class="more-btn" href="#"> C++ <i class="fas fa-angle-right"></i></a>
+              <ul class="more-menu">
+                <li class="more-item"><a href="c_program(1).html">Level-1</a></li>
+                <li class="more-item"><a href="c_program(2).html">Level-2</a></li>
+                <li class="more-item"><a href="c_program(3).html">Level-3</a></li>
+              </ul>
+            </li>
+
+
+          </ul>
+        </li>
+        <li class="menu-item"><a href="roadmap.html">Roadmap</a></li>
+        <li class="menu-item"><a href="About.html">About</a></li>
+        
+      </ul>
+    </div>
+        
+   
+   
+
+  </header>
+   
+          <div class="department-container"><p class="top"> DEPARTMENTS</p>
+            <div class="department">
+            <div class="department-button">
+            
+                  <button class="button-1"><a class="effect" href="subject.html">INFORMATION TECHNOLOGY</a></button>  
+                  <button class="button-1"> <a class="effect" href="subject.html">ELECTRONICS AND COMMUNICATION ENGINEERING</a></button>      
+                  <button class="button-1"><a class="effect" href="subject.html"> COMPUTER SCIENCE AND ENGINEERING</a></button>
+                  <button class="button-1"><a class="effect" href="subject.html"> MECHANICAL ENGINEERING</a></button>
+                  <button class="button-1"><a class="effect" href="subject.html"> CIVIL ENGINEERING</a></button>
+                  <button class="button-1"> <a class="effect" href="subject.html">BIO-MEDICAL ENGINEERING</a></button>
+                  <button class="button-1"><a class="effect" href="subject.html">ELECTRICAL AND ELECTRONICS ENGINEERING</a></button>
+                  <button class="button-1"><a class="effect" href="subject.html"> COMPUTER SCIENCE AND BUSINESS SYSTEMS</a></button>
+                  <button class="button-1"><a class="effect" href="subject.html"> ARTIFICIAL INTELLIGENCE AND DATA SCIENCE</a></button>
+                
+            </div>
+            </div>
+
+          </div> 
+</body>

@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+    
+
+<style>
+
+   
+
+    .problem-container{
+        background-color: white;
+        margin: 50px 50px;
+    }
+    .problem-content{
+        background-color: black;
+        color: white;
+        font-family: poppins,sans-serif;
+        width: 100%;
+        height: 1300px;
+       
+    }
+
+    h1{
+        
+        font-weight: 900;
+        text-align: center;
+        font-size: 50px;
+        margin-bottom: 0px;
+        margin-top: 20px;
+    }
+    h2{
+       font-size: 35px;
+       padding-left: 20px;
+    }
+    p{
+       font-size: 20px; 
+       padding-left: 20px;
+       padding-right: 20px;
+    }
+
+    pre{
+        font-size: x-large;
+        color: blue;
+        
+    }
+
+</style>
+<p>  LEVEL-1 PROGRAMMING</p>
+
+</head>
+
+<body>
+     <div class="problem-container">
+        <div class="problem-content">
+            <h1 >QUESTION 1</h1>
+            <br>
+            <h2 >PROBLEM DESCRIPTION</h2>
+            <p>
+                Professor JD has lots of options. Bottles containing all types of potions are stacked on shelves which cover the entire wall from floor to ceiling. 
+    
+                Professor JD has broken his bones several times while climbing the top shelf for retrieving a potion. He decided to get a ladder for him. 
+                
+                But he has no time to visit Charu. So he instructed Bargav to make a ladder for him. Professor JD specifically wants a step ladder that looks like an inverted 'V' from a side view.
+                
+                Professor just mentioned two things before vanishing-
+                
+                B - separation between left side (LS) and right side (RS) on the ground
+                
+                LS - the length of left side
+                
+                What should be the length of RS? At one extreme LS can be vertical and at other RS can be vertical. 
+                
+                Bargav is angry and confused. 
+                
+                 Can you help him find the minimum and maximum length of RS.
+                
+            </p>
+
+            <H2>CONSTRAINTS:</H2>
+            <P>
+                1 ≤ B < LS ≤ 100
+            </P>
+
+            <H2>INPUT FORMAT: </H2>
+            <P>
+                Only line of input contains2 integers representing B and LS respectively.
+            </P>
+
+            <H2> OUTPUT FORMAT: </H2>
+            <P>
+                The only ;line of output contains minimum value of RS and maximum value of RS, separated by space. 
+    
+    The answer (RS) will be considered correct if it has relative and absolute error less than 10-2.
+            </P>
+
+            <H2> SOLUTION</H2>
+            <pre>
+                
+           #include &lt;stdio.h &gt;
+            #include &lt;math.h&gt;
+            int main(){
+            float b,ls,rs1,rs2;
+            scanf("%f %f",&b,&ls);
+            b=b*b;
+            ls=ls*ls;
+            rs1=sqrt(ls-b);
+            rs2=sqrt(ls+b);
+            printf("%.5f %.5f",rs1,rs2);
+            return 0;}
+        
+           </pre>
+        </div>
+
+     </div>
+     </div>
+
+     <div class="problem-container">
+        <div class="problem-content">
+            <h1 >QUESTION 2</h1>
+            <br>
+            <h2 >PROBLEM DESCRIPTION</h2>
+            <p>
+                Tina's trainer have given her two positive integers U and V. Now her task is ti find the number of pairs of positive integers (X,Y) such that 1≤X≤U, 1≤Y≤V and X+Y is even.
+    
+                Tina is finding difficult to understand the problem.
+                
+                Can you help her solving the problem?
+                
+            </p>
+
+            <H2>CONSTRAINTS:</H2>
+            <P>
+                1≤A,B≤75
+            </P>
+
+            <H2>INPUT FORMAT: </H2>
+            <P>
+                The only line of each test case contains two space-separated integers U and V.
+    </P>
+
+            <H2> OUTPUT FORMAT: </H2>
+            <P>
+                In the only line of output print a single line containing one integer that represents the the number of valid pairs.
+    
+            </P>
+
+            <H2> SOLUTION</H2>
+            <pre>
+                
+                #include &lt;stdio.h&gt;
+                    int main()
+                    { int U,V;
+                    int sum;
+                    scanf("%2d%2d",&U,&V);
+                    sum=U*V/2+((U%2)*(V%2));
+                     printf("%d",sum);
+                     return 0;
+                    }
+                    </pre>
+        </div>
+
+     </div>
+     </div>
+    
+
+     <div class="problem-container">
+        <div class="problem-content">
+            <h1 >QUESTION 3</h1>
+            <br>
+            <h2 >PROBLEM DESCRIPTION</h2>
+            <p>
+                During the IPL Match between CSK and MI, as a part of IPL contest the question was asked to the fans.
+    
+                Who are all giving the correct answer to that question will get the free VIP box ticket for the Final for which CSK have already qualified .
+                
+                The question is convert given integer number to octal and hexadecimal number respectively.
+                
+                Abilash is an die heart CSK fan. Can you help him answer the question so that he can watch CSK play the final from VIP box?
+                
+            </p>
+
+            <H2>CONSTRAINTS:</H2>
+            <P>
+                1≤iplno≤10000
+            </P>
+
+            <H2>INPUT FORMAT: </H2>
+            <P>
+                Only line of input has single integer number that need to be converted.
+    
+                </P>
+
+            <H2> OUTPUT FORMAT: </H2>
+            <P>
+                In the First line of output print the octal number equivalent to the input value.
+    
+                In the Second line of output print the hexadecimal number equivalent to the input value.
+                
+            </P>
+
+            <H2> SOLUTION</H2>
+            <pre>
+                
+                #include &lt;stdio.h&gt;
+                    int main()
+                    {
+                        int iplno;
+                        scanf("%d",&iplno);
+                        printf("%o\n",iplno);
+                        printf("%x",iplno);
+                        return 0;
+                        }
+    
+                        
+                    </pre>
+        </div>
+
+     </div>
+     </div>
+    
+
+     <div class="problem-container">
+        <div class="problem-content">
+            <h1 >QUESTION 4</h1>
+            <br>
+            <h2 >PROBLEM DESCRIPTION</h2>
+            <p>
+                Ramesh is working in an engineering college hostel as a Mess supervisor. There are different messes are available based on the years. 
+    
+    Every day students count is varying in all the hostels due to continuous holidays.
+    
+    Since ramesh is in charge of the cooking team. He had trouble with calculating the quantity of food that needs to be prepared because of the varying student count.
+    
+    Even if a small quantity of food is prepared by the cooking team, it should be divided equally among the number of Mess.Ramesh needs an automated software to identify the amount of food available (in number of packets ) and Mess count. 
+    
+    Can you help him to divide the food equally and also calculating the remaining quantity of food that will be available after sharing the food equally ?
+    
+    
+            </p>
+
+            <H2>CONSTRAINTS:</H2>
+            <P>
+                1≤ alvqntoffood ≤10000
+                1≤ messcnt ≤20
+            </P>
+
+            <H2>INPUT FORMAT: </H2>
+            <P>
+                Only line of input has two integers (alvqntoffood, messcnt) separated by space representing the available number of food packets and the available number of messes respectively
+    
+                </P>
+
+            <H2> OUTPUT FORMAT: </H2>
+            <P>
+                In the only line of output print two values separated by a space representing the number of food packets that are equally shared by "n" number of messes and the remaining number of food packets available.
+    
+            </P>
+
+            <H2> SOLUTION</H2>
+            <pre>
+                
+                #include &lt;stdio.h&gt;
+                    int main()
+                    {
+                        int alvqntoffood,messcnt,dividedqnt,remfood;
+                        scanf("%dividedqnt",&alvqntoffood);
+                        scanf("%d",&messcnt);
+                        dividedqnt=alvqntoffood/messcnt;
+                        remfood=alvqntoffood%messcnt;
+                        printf("%d %d",dividedqnt,remfood);
+                        return 0;
+                    }
+                    
+                        
+                    </pre>
+        </div>
+
+     </div>
+     </div>
+
+
+     <div class="problem-container">
+        <div class="problem-content">
+            <h1 >QUESTION 5</h1>
+            <br>
+            <h2 >PROBLEM DESCRIPTION</h2>
+            <p>
+                Binita is playing a chess. The game will be played on a rectangular grid consisting of N rows and M columns. Initially all the cells of the grid are uncolored.
+    
+    Binita's initial score is zero. At each turn, he chooses some cell that is yet not colored, and colors that cell. The score obtained in this step will be number of neighboring colored cells of the cell that Binita colored in this step. 
+    
+    Two cells are neighbors of each other if they share a side between them. The game will end when all the cells are colored. Finally, total score obtained at the end of the game will sum of score obtained in each turn.
+    
+    Binita wants to know what maximum score he can get? Can you please help him in finding this out?
+    
+            </p>
+
+            <H2>CONSTRAINTS:</H2>
+            <P>
+                1 ≤ N, M ≤ 50
+            </P>
+
+            <H2>INPUT FORMAT: </H2>
+            <P>
+                The Only line of input contains two space-separated integers N, M denoting the dimensions of the grid.
+    
+                </P>
+
+            <H2> OUTPUT FORMAT: </H2>
+            <P>
+                Print the output a single line containing an integer corresponding to the maximal possible score Binita can obtain.
+    
+            </P>
+
+            <H2> SOLUTION</H2>
+            <pre>
+                
+                #include &lt;stdio.h&gt;
+                    int main()
+                    {
+                        int n,m;
+                        int d;
+                        scanf("%d %d",&n,&m);d=n-1+(1+2*(n-1))*(m-1);
+                        printf("%d",d);
+                        return 0;
+                    }
+                    
+                    
+                        
+                    </pre>
+        </div>
+
+     </div>
+     </div>
+
+
+     <div class="problem-container">
+        <div class="problem-content">
+            <h1 >QUESTION 6</h1>
+            <br>
+            <h2 >PROBLEM DESCRIPTION</h2>
+            <p>
+                Sajid was booking a train ticket from Chennai to Delhi for his family. Two of the relatives was interested in joining that journey from different places with their family members 
+    
+    So, Sajid booked tickets for those persons also along with his family members. 
+    
+    He wants to know the total number of tickets for this travel. 
+    
+    Can you help him in finding the total number of passengers?
+    
+            </p>
+
+            <H2>CONSTRAINTS:</H2>
+            <P>
+                Sajid has to declare three integer variables named as num1, num2, num3.
+    
+    
+    1 ≤ num1 ≤ 15
+    
+    1 ≤ num2 ≤ 15
+    
+    1 ≤ num3 ≤ 15
+    
+            </P>
+
+            <H2>INPUT FORMAT: </H2>
+            <P>
+                Only Line of input has three integers num1,num2 and num3 separated by a space  representing the numbers of ticket booked by Sajid at three different interval of time.
+    
+                </P>
+
+            <H2> OUTPUT FORMAT: </H2>
+            <P>
+                Print the total number of tickets booked by Sajid.
+    
+            </P>
+
+            <H2> SOLUTION</H2>
+            <pre>
+                
+                #include &lt;stdio.h&gt;
+                int main()
+                {
+                    int num1,num2,num3;
+                    int sum;
+                    scanf("%d %d %d",&num1,&num2,&num3);
+                    sum=num1+num2+num3;
+                    printf("%d",sum);
+                    return 0;
+                }
+                
+                    
+                    
+                        
+                    </pre>
+        </div>
+
+     </div>
+     </div>
+
+
+     
+     <div class="problem-container">
+        <div class="problem-content">
+            <h1 >QUESTION 7</h1>
+            <br>
+            <h2 >PROBLEM DESCRIPTION</h2>
+            <p>
+                Binita was travelling from Chennai to Delhi in Rajdhani Express. 
+    
+    The train have arrived at the destination later than the estimated time. 
+    
+    So, Binita wants to know the total number of hours and minutes the train was delayed.
+    
+    Can you help Binita in finding the exact hour and time Rajdhani Express was delay on the day of Binita's journey?
+            </p>
+
+            <H2>CONSTRAINTS:</H2>
+            <P>
+                100 ≤ tot_mins ≤ 550
+            </P>
+
+            <H2>INPUT FORMAT: </H2>
+            <P>
+                The only line of input has single value of variable tot_mins of type integer representing total minutes.
+    
+                </P>
+
+            <H2> OUTPUT FORMAT: </H2>
+            <P>
+                Print the Number of Hours and Minutes in a single line.
+    
+            </P>
+
+            <H2> SOLUTION</H2>
+            <pre>
+                
+                #include &lt;stdio.h&gt;
+                int main()
+                {
+                    int tot_mins,hrs,mins;
+                    scanf("%d",&tot_mins);
+                    hrs=tot_mins/60;
+                    mins=tot_mins%60;
+                    printf("%d Hours and %d Minutes",hrs,mins);
+                    return 0;
+                }
+                
+            
+                    
+                        
+                    </pre>
+        </div>
+
+     </div>
+     </div>
+
+
+     <div class="problem-container">
+        <div class="problem-content">
+            <h1 >QUESTION 8</h1>
+            <br>
+            <h2 >PROBLEM DESCRIPTION</h2>
+            <p>
+                Nathan works as an HR in a private company. He had an opportunity to interview students from various disciplines. 
+    
+                He asked the candidates to perform the addition of two floating point numbers given by him an to print the output with three values after decimal point. But the student failed a math test on adding two numbers. So many students could not complete the first round. 
+                
+                One day Nathan is invited as a chief placement trainer in a reputed engineering college. He willing to know how many students are capable of solving the same problem.
+                
+                Can you solve the problem and prove him that you are capable of solving it?
+    
+                
+                </p>
+
+            <H2>CONSTRAINTS:</H2>
+            <P>
+                1.00≤var1≤25000.00
+    
+    1≤var2≤25000.00
+
+
+            </P>
+
+            <H2>INPUT FORMAT: </H2>
+            <P>
+                 The only line of input has two input values of type float separated by a space.
+    
+                </P>
+
+            <H2> OUTPUT FORMAT: </H2>
+            <P>
+                In the only line of output print the sum of two numbers with three values after decimal point
+    
+    Refer sample input and output
+    
+            </P>
+
+            <H2> SOLUTION</H2>
+            <pre>
+                #include &lt;stdio.h&gt;
+                int main()
+               {
+               float var1,var2,res;
+               scanf("%f %f",&var1,&var2);
+               res=var1+var2;
+               printf("%.3f",res);
+               return 0;
+            
+               }
+    
+
+                        
+                    </pre>
+        </div>
+
+     </div>
+     </div>
+
+
+     <div class="problem-container">
+        <div class="problem-content">
+            <h1 >QUESTION 9</h1>
+            <br>
+            <h2 >PROBLEM DESCRIPTION</h2>
+            <p>
+                Elavenil has a chessboard with N rows and M columns. In one step, he can choose two cells of the chessboard which share a common edge (that has not been cut yet) and cut this edge.
+    
+    Formally, the chessboard is split into two or more pieces if it is possible to partition its cells into two non-empty subsets S1 and S2 (S1∩S2=∅, |S1|+|S2|=NM) such that there is no pair of cells c1,c2 (c1∈S1,c2∈S2) which share a common edge that has not been cut.
+    
+    Elavenil does not want the board to split into two or more pieces. Compute the maximum number of steps he can perform while satisfying this condition.
+    
+                
+                </p>
+
+            <H2>CONSTRAINTS:</H2>
+            <P>
+                1≤N,M≤8
+
+
+            </P>
+
+            <H2>INPUT FORMAT: </H2>
+            <P>
+                The only line of input test case contains two space-separated integers N and M.
+    
+                </P>
+
+            <H2> OUTPUT FORMAT: </H2>
+            <P>
+                In the only line of output print an integer representing the maximum possible number of steps.
+    
+            </P>
+
+            <H2> SOLUTION</H2>
+            <pre>
+                #include &lt;stdio.h&gt;
+                int main()
+                {
+                    int n,m;
+                    scanf("%d %d",&n,&m);
+                    int c=(m-1)*(n-1);
+                    printf("%d",c);
+                    return 0;
+                }
+                        
+                    </pre>
+        </div>
+
+     </div>
+     </div>
+
+
+     <div class="problem-container">
+        <div class="problem-content">
+            <h1 >QUESTION 10</h1>
+            <br>
+            <h2 >PROBLEM DESCRIPTION</h2>
+            <p>
+                Laasya bought a new volleyball in the sports shop. It looks like a medium size. 
+    
+    She somehow found the radius of the sphere.
+    
+    But she would like to know the volume of that ball. 
+    
+    Can you help him in finding the Volume of the ball? 
+    
+    Functional Description:
+    
+    Volume = (4.0/3.0) × π × r^3 
+    π = 3.14
+    
+                
+                </p>
+
+            <H2>CONSTRAINTS:</H2>
+            <P>
+                1.00 ≤ r ≤ 5.00
+
+            </P>
+
+            <H2>INPUT FORMAT: </H2>
+            <P>
+                The only line of input has a single value of type float representing the radius of the ball. 
+    
+                </P>
+
+            <H2> OUTPUT FORMAT: </H2>
+            <P>
+                Print the volume of the ball in a single line.
+    
+            </P>
+
+            <H2> SOLUTION</H2>
+            <pre>
+                #include &lt;stdio.h&gt;
+                int main()
+                {
+                float radiusofball,volumeofball;
+                scanf("%f",&radiusofball);
+                volumeofball=4.0/3.0*3.14*radiusofball*radiusofball*radiusofball;
+                printf("%f",volumeofball);
+                return 0;
+        
+                }
+    
+
+                        
+                    </pre>
+        </div>
+
+     </div>
+     </div>
+</body>
+</html>

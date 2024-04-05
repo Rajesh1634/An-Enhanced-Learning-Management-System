@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+    
+
+<style>
+
+   
+
+    .problem-container{
+        background-color: white;
+        margin: 50px 50px;
+    }
+    .problem-content{
+        background-color: black;
+        color: white;
+        font-family: poppins,sans-serif;
+        width: 100%;
+        height: 1700px;
+       
+    }
+
+    h1{
+        
+        font-weight: 900;
+        text-align: center;
+        font-size: 50px;
+        margin-bottom: 0px;
+        margin-top: 20px;
+    }
+    h2{
+       font-size: 35px;
+       padding-left: 20px;
+    }
+    p{
+       font-size: 20px; 
+       padding-left: 20px;
+       padding-right: 20px;
+    }
+
+    pre{
+        color: blue;
+         font-size: 20px; 
+        padding-left: 20px;
+        padding-right: 20px;
+        
+    }
+
+</style>
+<p>  LEVEL-3 PROGRAMMING</p>
+
+</head>
+
+<body>
+     <div class="problem-container">
+        <div class="problem-content">
+            <h1 >QUESTION 1</h1>
+            <br>
+            <h2 >PROBLEM DESCRIPTION</h2>
+            <p>
+                Caleb is a physicist working for DASA (Domestic Aeronautics and Space Administration) centre.He was studying about the falling payload delivering satellite's debris.
+    
+    He wanted determine how quickly an object is traveling when it hits the ground.Can you help Caleb with your technical knowledge.
+    
+    Note:
+    
+    The object is dropped its initial speed is 0m/s. 
+    
+    Assume that the acceleration due to gravity is 9.8m/s.
+    
+    Functional Description:
+    
+    Final Speed vf = squareroot [2*distance*gravity]
+    
+            </p>
+
+            <H2>CONSTRAINTS:</H2>
+            <P>
+                24.00 ≤ distance ≤ 90.00
+            </P>
+
+            <H2>INPUT FORMAT: </H2>
+            <P>
+                The user will enter the height from which the object is dropped in meters (m).
+    
+            </P>
+
+            <H2> OUTPUT FORMAT: </H2>
+            <P>
+                A float value upto two decimal places,Refer the test cases for the output format
+    
+            </P>
+
+            <H2> SOLUTION</H2>
+            <pre>
+                
+           #include &lt;stdio.h &gt;
+            #include &lt;math.h&gt;
+            int main()
+            {
+            float gravity,distance,vf;
+            gravity=9.8;
+            scanf("%f",&distance);
+            vf=sqrt(2*distance*gravity);
+            printf("%.2f m/s",vf);
+            return 0;
+            }
+            
+           </pre>
+        </div>
+
+     </div>
+     </div>
+
+     <div class="problem-container">
+        <div class="problem-content">
+            <h1 >QUESTION 2</h1>
+            <br>
+            <h2 >PROBLEM DESCRIPTION</h2>
+            <p>
+                Krishna has just arrived in the city of Madhura.
+    
+                He brought an old house and renovating it. On seeing the pathetic floor conditions he planned to pave it with tile. 
+                
+                He has a m x n units of floor area and want to cover it up with 2x1 size tiles. 
+                
+                Krishna is no so good at calculations. 
+                
+                Could you help him to find out the minimum number tiles he needs to cover the floor?
+                
+            </p>
+
+            <H2>CONSTRAINTS:</H2>
+            <P>
+                1 ≤ m,n ≤ 500
+            </P>
+
+            <H2>INPUT FORMAT: </H2>
+            <P>
+                Only line of input has two integers m and n separated by as space.
+    
+    </P>
+
+            <H2> OUTPUT FORMAT: </H2>
+            <P>
+                Print the minimum number of tiles need to pave the floor as output.
+    
+            </P>
+
+            <H2> SOLUTION</H2>
+            <pre>
+                
+                   #include &lt;stdio.h&gt;
+                   #include &lt;math.h&gt;
+                    int main(){
+                    int m,n;
+                    scanf("%d %d",&m,&n);
+                    int no=ceil(m*n/(2.0*1));
+                    printf("%d",no);
+                    return 0;};
+                    }
+                    </pre>
+        </div>
+
+     </div>
+     </div>
+    
+
+     <div class="problem-container">
+        <div class="problem-content">
+            <h1 >QUESTION 3</h1>
+            <br>
+            <h2 >PROBLEM DESCRIPTION</h2>
+            <p>
+                Nancy is a data scientist. She regularly faces about Terra bytes of data in her work .
+    
+    One day she was working on an application that collects users address and stores it based on the type of field it has to be .
+    
+    Unfortunately the application malfunctioned and the data collapsed .
+    
+    Nancy now has the burden of arranging the users data into their respective field can you help her ?
+    
+            </p>
+
+            <H2>CONSTRAINTS:</H2>
+            <pre>
+                0000 ≤ hno ≤ 9999
+                100000 ≤ pincode ≤ 999999
+    
+                1000 ≤ employeeID ≤ 9999 
+                000 ≤ areacode ≤ 999
+    
+            </pre>
+
+            <H2>INPUT FORMAT: </H2>
+            <pre>
+                First line of input represents hno
+    
+                Second line of input represents pincode 
+    
+                Third line of input represents employeeID
+    
+                Fourth line of input represents areacode
+    
+                </Pre>
+
+            <H2> OUTPUT FORMAT: </H2>
+            <P>
+                Print the output as per the format specification in the testcases.
+    
+            </P>
+
+            <H2> SOLUTION</H2>
+            <pre>
+                
+                #include &lt;stdio.h&gt;
+                int main()
+                {
+                int employeeID,areacode,hno,pincode;
+                scanf("%d",&hno);
+                scanf("%d",&pincode);
+                scanf("%d",&employeeID);
+                scanf("%d",&areacode);
+                printf("EmployeeID : %d\nArea Code : %d\nHouse Number : %d\nPincode : %d",employeeID,areacode,hno,pincode);
+                return 0;
+                }
+    
+                        
+                    </pre>
+        </div>
+
+     </div>
+     </div>
+    
+
+     <div class="problem-container">
+        <div class="problem-content">
+            <h1 >QUESTION 4</h1>
+            <br>
+            <h2 >PROBLEM DESCRIPTION</h2>
+            <p>
+                Ford once was going down by loosing all their share values due to the less innovative employees in their company.They wanted to win their competitor named Ferrari.They recruited a car mechanic who has the capability to build a racing car.
+    
+                The car mechanic estimated a time in seconds which will be taken to construct a race car,But the professionals in Ford wanted the exact time in D:HH:MM:SS, (where D, HH, MM, and SS represent days, hours, minutes and seconds respectively) to be convinced for funding. 
+                
+                Help them with a suitable logic that can help the car mechanic to convince Ford company.
+                
+            </p>
+
+            <H2>CONSTRAINTS:</H2>
+            <P>
+                100 ≤ seconds ≤ 455000
+            </P>
+
+            <H2>INPUT FORMAT: </H2>
+            <P>
+                The Only line of input has single value representing the duration in seconds.
+    
+                </P>
+
+            <H2> OUTPUT FORMAT: </H2>
+            <pre>
+                Print the duration in days, hours, minutes and seconds in format.
+    
+                Refer sample test cases for format specification.
+    
+            </pre>
+
+            <H2> SOLUTION</H2>
+            <pre>
+                
+                #include &lt;stdio.h&gt;
+                int main()
+                { int seconds,days,hours,minutes;
+                 int s;
+                 scanf("%d",&s);
+                 days=s/(86400);
+                 s=s%86400;
+                 hours=s/3600;
+                 s=s%3600;
+                 minutes=s/60;
+                 seconds=s%60;
+                 printf("The Duration is %d days %d hours %d minutes %d seconds",days,hours,minutes,seconds);
+                return 0;
+                }
+                
+                    
+                        
+                    </pre>
+        </div>
+
+     </div>
+     </div>
+
+
+     <div class="problem-container">
+        <div class="problem-content">
+            <h1 >QUESTION 5</h1>
+            <br>
+            <h2 >PROBLEM DESCRIPTION</h2>
+            <p>
+                
+    Vinod is part of Great Indian Survey NGO who were collecting peoples year of birth for the detailed analysis on that particular year's population.
+    
+    After a month long travel they have collected lakh's of people data from the eastern states of India.
+    
+    Now Vinod need to extract the last two digits of the people's year from the data they have for documentation purpose.
+    
+    Since the samples are in huge numbers  it is difficult for Vinod to single handly do that. 
+    
+    Can you help Vinod in completing the extraction process early?
+    
+            </p>
+
+            <H2>CONSTRAINTS:</H2>
+            <P>
+                1901≤year<2021
+            </P>
+
+            <H2>INPUT FORMAT: </H2>
+            <P>
+                The only line of input has single integer representing the year of birth of individual.
+    
+                </P>
+
+            <H2> OUTPUT FORMAT: </H2>
+            <P>
+                Print the last two digits of the year as output.
+    
+            </P>
+
+            <H2> SOLUTION</H2>
+            <pre>
+                
+                #include &lt;stdio.h&gt;
+                int main()
+                {
+                int year,yr;
+                scanf("%d",&year);
+                yr=year%100;
+                printf("%02d",yr);
+                return 0;
+                }
+                    
+                    
+                        
+                    </pre>
+        </div>
+
+     </div>
+     </div>
+
+
+     <div class="problem-container">
+        <div class="problem-content">
+            <h1 >QUESTION 6</h1>
+            <br>
+            <h2 >PROBLEM DESCRIPTION</h2>
+            <p>
+                Aarav and Nathan who live in the fictional town of Pune, think and do innovatively on weekends. Every day the boys embark on some grand new project, which annoys their controlling sister Thendral, who tries to bust them. 
+    
+                One Sunday they were both sitting under a tree in their back yard. They decide to invent the machine which would allow us to enter 2 numbers it would say whether one of the entered numbers is an appropriate value of the other number entered. 
+                
+                They decide to insert a program code into the machine. A number is said to be an approximate value of the other if they differ by utmost 0.5. 
+                
+                Can you help Aarav and Nathan with the programming logic to find whether the given number is an approximate number of other?
+                 
+                
+            </p>
+
+            <H2>CONSTRAINTS:</H2>
+            <pre>
+                0≤A≤1000
+                0≤B≤1000
+                 
+    
+            </pre>
+
+            <H2>INPUT FORMAT: </H2>
+            <P>
+                The only line of input has two numbers of type float separated by a space representing A and B respectively.   
+    
+                </P>
+
+            <H2> OUTPUT FORMAT: </H2>
+            <P>
+                In the only line of output print as “Approximate number” or “Not an Approximate number” based on the condition.
+    
+            </P>
+
+            <H2> SOLUTION</H2>
+            <pre>
+                
+                #include &lt;stdio.h&gt;
+                int main()
+                {
+                float a,b;
+                scanf("%f\n %f",&a,&b);
+                ((a-b)<=0.5)?printf("Approximate number"):printf("Not an Approximate number");
+                return 0;
+                }
+                
+                    
+                    
+                        
+                    </pre>
+        </div>
+
+     </div>
+     </div>
+
+
+     
+     <div class="problem-container">
+        <div class="problem-content">
+            <h1 >QUESTION 7</h1>
+            <br>
+            <h2 >PROBLEM DESCRIPTION</h2>
+            <p>
+                Yasir was making a kite.His sister Athika said that she can print the frame of the kite using biodegradable material and a 3D printer .
+    
+                The shape of the frame is simple in the top it is triangle between the triangles mid point there comes a straight thicker line which extends upto the bottom.
+                
+                Once printed a sheet of paper can be used to cover the frame. Athika made the frame using the 3d printer and asked Yasir to buy a sheet of paper .
+                
+                But Yasir wants to know the exact area covered by the top triangle of the frame. 
+                
+                Athika had the dimensions fed in her laptop help her to compute the area of the triangle using the 3 sides.
+                
+            </p>
+
+            <h2> FUNCTIONAL DESCRIPTION</h2>
+
+            <pre>
+                Let s1, s2 and s3 be the lengths of the sides. 
+    
+                Let s = (s1 + s2 + s3)/2. 
+                
+                Then the area of the triangle can be calculated using the following formula:
+                
+                Area =sqrt(s × (s − s1) × (s − s2) × (s − s3))
+                
+            </pre>
+            <H2>CONSTRAINTS:</H2>
+            <pre>
+                1.00 ≤ s1 ≤ 10.00
+    
+                1.00 ≤ s2 ≤ 10.00
+    
+                1.00 ≤ s3 ≤ 10.00
+    
+            </pre>
+
+            <H2>INPUT FORMAT: </H2>
+            <pre>
+                First Line: Single value representing the Length of side1
+    
+                Second Line: Single value representing the Length of side2
+    
+                Third Line: Single value representing the Length of side3
+    
+            </pre>
+
+            <H2> OUTPUT FORMAT: </H2>
+            <P>
+                Print the area of the triangle.
+    
+            </P>
+
+            <H2> SOLUTION</H2>
+            <pre>
+                
+                   #include &lt;stdio.h&gt;
+                   #include &lt;math.h&gt;
+                    int main()
+                    {
+                     float s1,s2,s3,s,area;
+                     scanf("%f %f %f",&s1,&s2,&s3);
+                     s=(s1+s2+s3)/2;
+                     area=sqrt(s*(s-s1)*(s-s2)*(s-s3));
+                     printf("%.2f",area);
+                    return 0;
+                    }
+                    
+                
+                
+            
+                    
+                        
+                    </pre>
+        </div>
+
+     </div>
+     </div>
+
+
+     <div class="problem-container">
+        <div class="problem-content">
+            <h1 >QUESTION 8</h1>
+            <br>
+            <h2 >PROBLEM DESCRIPTION</h2>
+            <p>
+                Madhan was working as a loco pilot in the Indian railways. 
+    
+    He was traveling from one state to another state by train. 
+    
+    The default distance calculation machine shows the total traveling distance in kilometres.
+    
+    But Madhan would like to know the distance in Meters, Feet, Inches, Centimeters
+    
+    Can you provide him the distance in as he requests?
+                
+            </p>
+
+            <H2>CONSTRAINTS:</H2>
+            <P>
+                1 <= distance <= 20000
+
+
+            </P>
+
+            <H2>INPUT FORMAT: </H2>
+            <P>
+                Only line of input has single floating point value representing the total kilometres driven by Madhan
+    
+                </P>
+
+            <H2> OUTPUT FORMAT: </H2>
+            <P>
+                Print the distance in Meters, feet, inches and centimetres in a separate line respectively.
+    
+            </P>
+
+            <H2> SOLUTION</H2>
+            <pre>
+                #include &lt;stdio.h&gt;
+                int main()
+                {
+                float distance,meter,feet,inches,centimeter;
+                scanf("%f",&distance);
+                meter=distance*1000;
+                feet=distance*3280.84;
+                inches=distance*39370.1;
+                centimeter=distance*100000;
+                printf("\n%.2f m",meter);
+                printf("\n%.2f ft",feet);
+                printf("\n%.2f in",inches);
+                printf("\n%.2f cm",centimeter);
+                return 0;
+                }
+                
+    
+
+                        
+                    </pre>
+        </div>
+
+     </div>
+     </div>
+
+
+     <div class="problem-container">
+        <div class="problem-content">
+            <h1 >QUESTION 9</h1>
+            <br>
+            <h2 >PROBLEM DESCRIPTION</h2>
+            <p>
+                ArulMozhivarman and his wife Yazhini loves to travel around the world. As a part of their epic journey they together spent 1 year in various states of United States and after 1 year they traveled to Canada.
+    
+    Usually in United States fuel efficiency for vehicles is normally expressed in MilesPer Gallon(MPG).
+    
+    But in Canada, fuel efficiency is normally expressed in Liters Per Hundred Kilometers (L/100 km).
+    
+    ArulMozhivarman and his wife Yazhini were little bit confused in calculating the fuel efficiency of the vechicles they for their daily travels and they feel if there is portal for converting the fuel efficiency in  MPG to L/100 km then their life will be much more easier.
+    
+    Can you help them with the fuel efficiency conversion portal so that they can enjoy their time together without working about the fuel efficiency of their vehicles?
+    
+    Functional Description:
+    
+    1 MPG = 235.215 L/100 km
+    
+                
+            </p>
+
+            <H2>CONSTRAINTS:</H2>
+            <P>
+                1≤mpg<150
+
+
+            </P>
+
+            <H2>INPUT FORMAT: </H2>
+            <P>
+                Only line of input has single integer value representing the fuel efficiency in MPG.
+    
+                </P>
+
+            <H2> OUTPUT FORMAT: </H2>
+            <P>
+                Print the single floating point value representing the fuel efficiency in L/100 km.
+    
+            </P>
+
+            <H2> SOLUTION</H2>
+            <pre>
+                int main()
+                {
+                int mpg;
+                float lph;
+                scanf("%d",&mpg);
+                lph=235.215/mpg;
+                printf("%.2f L/100 km",lph);
+                return 0;}
+                        
+                    </pre>
+        </div>
+
+     </div>
+     </div>
+
+
+     <div class="problem-container">
+        <div class="problem-content">
+            <h1 >QUESTION 10</h1>
+            <br>
+            <h2 >PROBLEM DESCRIPTION</h2>
+            <p>
+                Binita always dreamed of flying in the sky from her childhood.Her goal was to become a pilot.When she applied for the pilot training program she cleared the entrance exam but failed the physical test due to overweight.She forget to take care of her health during the preparation.But she had the spirit of not giving up.Binita joined a gym to pass the physical test next time.Her gym trainer asked her to calculate BMI for giving her a proper diet plan,But she had other works to do can you help this motivated girl?
+    
+    Functional Description:
+    
+    BMI = weight / height × height
+    
+                
+            </p>
+
+            <H2>CONSTRAINTS:</H2>
+            <pre>
+                40≤ weight ≤80
+    
+                1.50 ≤ Height ≤ 1.72
+            </pre>
+
+            <H2>INPUT FORMAT: </H2>
+            <pre>
+                First line has the value of weight of type integer
+                Second line has the value of height of type float
+                
+            </pre>
+
+            <H2> OUTPUT FORMAT: </H2>
+            <P>
+                Print the BMI with only two values after decimal points.
+    
+            </P>
+
+            <H2> SOLUTION</H2>
+            <pre>
+                #include &lt;stdio.h&gt;
+                int main()
+                {
+                int weight;
+                float height,bmi;
+                scanf("%d\n",&weight);
+                scanf("%f",&height);
+                bmi=(weight/(height*height));
+                printf("%.2f",bmi);
+                return 0;
+                }
+                
+               
+                    </pre>
+        </div>
+
+     </div>
+     </div>
+</body>
+</html>

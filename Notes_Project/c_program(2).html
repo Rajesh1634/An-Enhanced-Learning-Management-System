@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html> 
+    <head>
+        <style>
+             .problem-container{
+             background-color: white;
+             margin: 50px 50px;
+                }
+             
+             .problem-content{
+              background-color: black;
+              color: white;
+              font-family: poppins,sans-serif;
+              width: 100%;
+              height: 1500px;
+            }
+   
+            h1{
+        
+                font-weight: 900;
+                text-align: center;
+                font-size: 50px;
+                margin-bottom: 0px;
+                margin-top: 20px;
+            }
+            h2{
+            font-size: 35px;
+            padding-left: 20px;
+            }
+            p{
+            font-size: 20px; 
+            padding-left: 20px;
+            padding-right: 20px;
+            }
+
+            pre{
+                font-size: x-large;
+                color: blue;
+                
+            }
+
+        </style>
+
+    
+
+    
+
+
+<p>  LEVEL-2 PROGRAMMING</p>
+
+</head>
+
+<body>
+     <div class="problem-container">
+        <div class="problem-content">
+            <h1 >QUESTION 1</h1>
+            <br>
+            <h2 >PROBLEM DESCRIPTION</h2>
+            <p>
+                Sajid loves super heroes he used to imagine himself to be a hero.
+        
+        One day his teacher was taking a class about shapes and asked the students to find the Area of the triangle using Heron's formula. 
+        
+        Sajid misheard this as Hero's formula and was curious to discover the Hero's formula for finding the area of the triangle.
+        
+        Help Sajid to solve his math problem by using the correct logic in your code
+    </p>
+            
+
+            <H2>CONSTRAINTS:</H2>
+            <Pre>
+                1≤ a ≤ 15
+                1≤ b ≤ 15
+                1≤ c ≤ 15
+            </Pre>
+
+            <h2>FUNCTIONAL-DESCRIPTION</h2>
+              <pre>
+                Area = sqrt(s(s – a)(s – b)(s – c)), where 
+                s = (a + b + c) / 2 and
+                a, b & c are the sides of triangle.
+            </pre>  
+                
+             
+
+            <H2>INPUT FORMAT: </H2>
+            <P>
+                Only Line of input has 3 integers representing 3 side of the triangle separated by a space.
+            </P>
+
+            <H2> OUTPUT FORMAT: </H2>
+            <P>
+                Print the area of the triangle with only two values after the decimal point
+            </P>
+
+            <H2> SOLUTION</H2>
+          <pre>   
+            #include &lt;stdio.h &gt;
+            #include &lt;math.h&gt;
+            int main(){
+                int a,b,c;
+                float s,area;
+                scanf("%d %d %d",&a,&b,&c);
+                s=(a+b+c)/2;
+                area=sqrt(s*(s-a)*(s-b)*(s-c));
+                printf("%.2f\n",area);
+                return 0;
+                }
+        
+           </pre>
+        </div>
+
+     </div>
+     </div>
+
+
+
+
+     <div class="problem-container">
+        <div class="problem-content">
+            <h1 >QUESTION 2</h1>
+            <br>
+            <h2 >PROBLEM DESCRIPTION</h2>
+            <p>
+                Salima saw a pair of beautiful dress online but she was confused about the metric system used for the size of the dress. 
+        
+                It was given in feet and inches, even in some countries that primarily use some other metric system.
+                
+                As Salima knows a little bit of programming she thought of creating a program that gets number of feet and inches  and compute the height of the customer in centimeters.
+    </p>
+            
+
+            <H2>CONSTRAINTS:</H2>
+            <Pre>
+                5≤feet≤7
+                5≤inches≤7
+            </Pre>
+
+            <h2>FUNCTIONAL-DESCRIPTION</h2>
+              <pre>
+                One foot is 12 inches. 
+                One inch is 2.54 centimeters.
+              
+            </pre>  
+                
+             
+
+            <H2>INPUT FORMAT: </H2>
+            <P>
+                Only line of input has two numbers of type integer representing the feet and inches separated by a space
+            </P>
+
+            <H2> OUTPUT FORMAT: </H2>
+            <P>
+                Print the Height of the customer in centimeters
+            </P>
+
+            <H2> SOLUTION</H2>
+          <pre>   
+            #include &lt;stdio.h &gt;
+            int main(){
+                int feet,inches;
+                float cms;
+                scanf("%d %d",&feet,&inches);
+                cms=feet*12*2.54+inches*2.54;
+                printf("Your height in centimeters is : %.2f",cms);
+                return 0;
+                }
+        
+           </pre>
+        </div>
+
+     </div>
+     </div>
+
+
+
+
+
+
+     <div class="problem-container">
+        <div class="problem-content">
+            <h1 >QUESTION 3</h1>
+            <br>
+            <h2 >PROBLEM DESCRIPTION</h2>
+            <p>
+                Aaron took his girl friend Binita to a restauraunt as he got a job of his dreams.
+        
+                Since he had small welcome interview he was little bit tennsed.
+                
+                Binita figured this out and to get back Aaron's confidence she gave him a little task,
+                
+                When they received the bill for the food they ordered,she asked aaron to find out the tax amount of the bill and tip for the meal through a computer code. 
+                
+                Aaron can use your local tax rate when computing the amount of tax owing.
+                
+                Can you help aaron to code the suitable logic.
+    </p>
+            
+
+            <H2>CONSTRAINTS</H2>
+            <Pre>
+                50≤billwt≤1300   </Pre>
+               <p> Where billwt is the variable you should use for getting the bill amount without tax and tip.</p>
+                     
+            
+
+            <h2>FUNCTIONAL-DESCRIPTION</h2>
+              <pre>
+                Local tax= 18%
+                Tip amount=5%
+            </pre>  
+                
+             
+
+            <H2>INPUT FORMAT </H2>
+            <P>
+                Single Line of input has single value of type integer representing the Bill Amount Without Tax and Tip
+            </P>
+
+            <H2> OUTPUT FORMAT</H2>
+            <P>
+                In First Line Print the calculated Tax with only 2 values after decimal point.
+        
+                In the Second Line Print the calculated Tip with only 2 values after decimal point.
+                
+                In the Third Line Print the Total Bill Amount with tax and tip with only 2 values after decimal point.
+                
+            </P>
+
+            <H2> SOLUTION</H2>
+          <pre>   
+            #include &lt;stdio.h &gt;
+            int main(){
+                int billwt;
+                float tax,tip,totaltax,totaltip,totalbill;
+                scanf("%d",&billwt);
+                tax=0.18;
+                tip=0.05 ;
+                totaltax=tax*billwt;
+                totaltip=tip*billwt;
+                totalbill=billwt+totaltax+totaltip;
+                printf("The Tax is %.2f",totaltax);
+                printf("\nThe Tip is %.2f",totaltip);
+                printf("\nTotal Bill With Tax and Tip is %.2f",totalbill);
+                return 0;}
+        
+           </pre>
+        </div>
+
+     </div>
+     </div>
+
+
+     
+     <div class="problem-container">
+        <div class="problem-content">
+            <h1 >QUESTION 4</h1>
+            <br>
+            <h2 >PROBLEM DESCRIPTION</h2>
+            <p>
+                Nathan was a student by morning and a computer nerd by night .
+        
+        At the earlier stages of his career he was in need of money,
+        
+        So he started working in a grocery store. In the grocery store he need to get the product ID, price of the product(Price per Unit) and the quantity of the product purchased by the customer.
+        
+        At point of time he found he was doing the same job again and again so he thought of automating the task. 
+        
+        Help Nathan for framing the code for his work. 
+    </p>
+            
+
+            <H2>CONSTRAINTS</H2>
+            <Pre>
+                1000 ≤ billid ≤ 9999
+        
+                1000 ≤ prodid ≤ 9999
+                
+                10.00 ≤ price ≤ 500.00
+                1 ≤ quantity ≤ 500  </Pre>
+             
+            <H2>INPUT FORMAT </H2>
+            <P>
+                First line has the bill id in integer format
+                Second line has the product id in integer format
+                Third line contains the product's price in float format
+                Fourth line contains the quantity of purchased items in integer format
+            </P>
+
+            <H2> OUTPUT FORMAT</H2>
+            <P>
+                Print the bill amount corresponding to the bill id.
+            </P>
+
+            <H2> SOLUTION</H2>
+          <pre>   
+            #include &lt;stdio.h &gt;
+            int main(){
+                int prodid,billid,quantity;
+                float price,totprice;
+                scanf("%d",&billid);
+                scanf("\n%d",&prodid);
+                scanf("\n%f",&price);
+                scanf("%d",&quantity);
+                totprice=price*quantity;
+                printf("%.2f",totprice);
+                return 0;
+                }
+           </pre>
+        </div>
+
+     </div>
+     </div>
+
+
+
+     <div class="problem-container">
+        <div class="problem-content">
+            <h1 >QUESTION 5</h1>
+            <br>
+            <h2 >PROBLEM DESCRIPTION</h2>
+            <p>
+                Arul and Kani own the farm in the beautiful location of the city were lot of cows was roaming around. One day Arul and Kani was out of the city. On that day cows have eaten the grasses in the farm which is circular in structure. 
+        
+                Whem Arul and Kani reached the location they were shocked to see the grass being eaten by crows. Now they wold like  to know for how much area and circumference of the farm the cows have eaten the grass. 
+                
+                Can you help them finding it.
+    </p>
+            
+
+            <H2>CONSTRAINTS</H2>
+            <Pre>
+                1.00 &gt;=rad &gt;=100.00  </Pre>
+               
+                     
+            
+
+            <h2>FUNCTIONAL-DESCRIPTION</h2>
+              <pre>
+                Circumference = 2*π*r 
+                Area =π *r*r
+                π = 3.14
+            </pre>  
+                
+             
+
+            <H2>INPUT FORMAT </H2>
+            <P>
+                The only line of the input represents the radius of the circle of type float.
+            </P>
+
+            <H2> OUTPUT FORMAT</H2>
+            <P>
+                Print the area in the first line and circumference in the second line with only 2 values after decimal point
+            </P>
+
+            <H2> SOLUTION</H2>
+          <pre>   
+            #include &lt;stdio.h &gt;
+            int main(){
+                float rad;
+                float PI=3.14,area,ci;
+                scanf("%f",&rad);
+                area=PI*rad*rad;
+                ci=2*PI*rad;
+                printf("%.2f\n%.2f",area,ci);
+                return 0;
+                }
+            </pre>
+        </div>
+
+     </div>
+     </div>
+        
+         
+     <div class="problem-container">
+        <div class="problem-content">
+            <h1 >QUESTION 6</h1>
+            <br>
+            <h2 >PROBLEM DESCRIPTION</h2>
+            <p>
+                Ratik a young millionaire deposits $10000 into a bank account paying 7% simple interest per year. 
+        
+                He left the money in for 5 years. He likes to predict the interest and the amount earned by him at the end of 5 years
+                Can you help him to find the interest and amount resided in his bank acoount after 5 years? 
+    </p>
+            
+
+            <H2>CONSTRAINTS</H2>
+            <Pre>
+                $10000.00≤ p ≤$250000.00
+        
+                5.00 ≤ i ≤ 70.00
+                
+                5 ≤ t ≤ 25  </Pre>
+               
+                     
+            
+
+            <h2>FUNCTIONAL-DESCRIPTION</h2>
+              <pre>
+                interest = (p * i * t) / 100 and
+                amount = p + interest.
+            </pre>  
+             <p>where p is total principal, i is rate of interest per year, and t is total time in years. </p>
+           
+                
+             
+
+            <H2>INPUT FORMAT </H2>
+            <P>
+                Only Line of Input has three values representing Principle,Interest per year and Time in Investment of type float, float and integer respectively.
+            </P>
+
+            <H2> OUTPUT FORMAT</H2>
+            <P>
+                First Line: Print the interest earned for the principle amount in floating point format with 2 values after decimal point
+            </P>
+            <p>Second Line: Print the Total amount earned including interest at the end of investment period in floating point format with 2 values after decimal point</p>
+
+            <H2> SOLUTION</H2>
+          <pre>   
+            #include &lt;stdio.h &gt;
+            int main(){
+                float p,i,interest,amount;
+                int t;
+                scanf("%f %f %d",&p,&i,&t);
+                interest= p*i*t/100;
+                amount=p+interest;
+                printf("Interest after %d Years = $%.2f",t,interest);
+                printf("\nTotal Amount after %d Years = $%.2f",t,amount);
+                return 0;
+                }
+            </pre>
+        </div>
+
+     </div>
+     </div>
+
+
+     <div class="problem-container">
+        <div class="problem-content">
+            <h1 >QUESTION 7</h1>
+            <br>
+            <h2 >PROBLEM DESCRIPTION</h2>
+            <p>
+                
+        Roopa and Atifa are sisters they love to compete by playing math games which gradually helped them in their academics one day.
+        
+        Roopa gave her a math puzzle to her sister.
+        
+        The puzzle involves two decimal numbers.
+        
+        Atifa just had add the two floating point numbers but the twist is Atifa should only add the integer part of the decimal number.
+        
+        But Atifa thought she can code a program for the puzzle  but she is finding it difficult.
+        
+        Can you help her with the suitable logic?
+        
+    </p>
+            
+
+            <H2>CONSTRAINTS</H2>
+            <Pre>
+                0.00 ≤ num1 ≤ 500.00
+        
+                0.00 ≤ num2 ≤ 500.00  </Pre>
+               
+                     
+            
+
+            <h2>FUNCTIONAL-DESCRIPTION</h2>
+                
+             <p> Roopa gave her sister two floating point numbers : 23.44 and 33.22 Her sister need to identify the left side integral part of given numbers are 23 and 33 . Finally the added output value is 56 </p>
+           
+                
+             
+
+            <H2>INPUT FORMAT </H2>
+            <P>
+                First Line: Has Single Input of type float representing first number
+            </P>
+            <p> Second Line: Has Single Input of type float representing second number</p>
+
+            <H2> OUTPUT FORMAT</H2>
+            <P>
+                Print the Sum of Integer parts of two numbers</P>
+            
+            <H2> SOLUTION</H2>
+          <pre>   
+            #include &lt;stdio.h &gt;
+            int main(){
+                    float num1,num2;
+                    int sum;
+                    scanf("%f",&num1);
+                    scanf("%f",&num2);
+                    sum=(int)num1+(int)num2;
+                    printf("%d",sum);
+                    return 0;}
+        
+            </pre>
+        </div>
+
+     </div>
+     </div>
+
+
+
+     <div class="problem-container">
+        <div class="problem-content">
+            <h1 >QUESTION 8</h1>
+            <br>
+            <h2 >PROBLEM DESCRIPTION</h2>
+            <p>
+                
+                Arif planned to make a room cleaning robot for his college mini project competition.
+        
+                First he has to code program to simulate the robot movements inside the room.
+                
+                He measured the length and width of the room.
+                
+                Once the values are available, his program should compute and display the area of the room.
+                
+                Can you help Arif with a suitable logic for the code?
+        
+    </p>
+            
+
+            <H2>CONSTRAINTS</H2>
+            <Pre>
+                20.00 ≤ length ≤ 100.00
+        
+                20.00 ≤ width ≤ 100.00  </Pre>
+       
+
+            <H2>INPUT FORMAT </H2>
+            <P>
+                First Line:has single floating point number representing length of the room
+            </P>
+            <p> Second Line:has single floating point number representing width of the room</p>
+
+            <H2> OUTPUT FORMAT</H2>
+            <P>
+                Print the area of the room in square feet</P>
+            
+            <H2> SOLUTION</H2>
+          <pre>   
+            #include &lt;stdio.h &gt;
+            int main(){
+                float length,width,area;
+                scanf("%f\n %f\n",&length,&width);
+                area=length*width;
+                printf("%.2f sq.ft",area);
+                return 0;
+                }
+                
+        
+            </pre>
+        </div>
+
+     </div>
+     </div>
+
+
+
+     <div class="problem-container">
+        <div class="problem-content">
+            <h1 >QUESTION 9</h1>
+            <br>
+            <h2 >PROBLEM DESCRIPTION</h2>
+            <p>
+                
+                Surya was used to wear a smartwatch when he was in the Treadmill and during Cycling. 
+        
+        Surya's Smart watch displays the total workout time in seconds.
+        
+        But Surya would like to know the time he spent for workout in H:M:S format.
+        
+        
+        Can you help surya in knowing the time he spent on workout in the prescribed format?
+        
+    </p>
+            
+
+            <H2>CONSTRAINTS</H2>
+            <Pre>
+                1 &lt;= sec &lt;= 10000  </Pre>
+       
+
+            <H2>INPUT FORMAT </H2>
+            <P>
+                The only line of output represents the workout timing in seconds
+            </P>
+           
+
+            <H2> OUTPUT FORMAT</H2>
+            <P>
+                In the only line of output print the workout timing of surya in the prescribed format.
+        
+        Refer sample testcases for format specification.</P>
+            
+            <H2> SOLUTION</H2>
+          <pre>   
+            #include &lt;stdio.h &gt;
+            int main(){
+                int sec,h,m,s;
+                scanf("%d",&sec);
+                h=sec/3600;
+                m=(sec-(h*3600))/60;
+                s=(sec-(h*3600)-m*60);
+                printf("%dH:",h);
+                printf("%dM:",m);
+                printf("%dS",s);
+                return 0;}
+                
+        
+            </pre>
+        </div>
+
+     </div>
+     </div>
+        
+
+
+     <div class="problem-container">
+        <div class="problem-content">
+            <h1 >QUESTION 10</h1>
+            <br>
+            <h2 >PROBLEM DESCRIPTION</h2>
+            <p>
+                
+                Athika and Ritu got a nice job at a MNC company .
+        
+                She was confused with the salary credited in her account.
+                
+                To verify if the correct amount of HRA and DA was provided to them Ritu and Athika  planned to develop a software that calculates the salary pay if the basic pay was provided.
+                
+                The Salary policy of Athika and Ritu's Company is as follows:
+                
+                HRA is 80% of the basic pay and
+                
+                DA is 40% of basic pay 
+                Can you help Ritu and Athika in the software development?
+        
+    </p>
+            
+
+            <H2>CONSTRAINTS</H2>
+            <Pre>
+                20000≤basic≤75000 </Pre>
+       
+
+            <H2>INPUT FORMAT </H2>
+            <P>
+                Single Integer representing the basic pay of the employee.
+            </P>
+           
+
+            <H2> OUTPUT FORMAT</H2>
+            <P>
+                Print the Gross salary of employee by adding the certain amount of HRA and DA to the basic pay.
+        </P>
+            
+            <H2> SOLUTION</H2>
+          <pre>   
+            #include &lt;stdio.h &gt;
+            int main(){
+                float basic,sal;
+                scanf("%f",&basic);
+                sal=0.8*basic+0.4*basic+basic;
+                printf("%.2f",sal);
+                return 0;
+               
+               }
+                
+        
+            </pre>
+        </div>
+
+     </div>
+     </div>
+        
+         
