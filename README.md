@@ -14,5 +14,8 @@ Welcome to Empowering Learning, an innovative project designed to revolutionize 
 
 5. **Personalized Learning Experience:** Every student is unique, and ELMS recognizes this. With features such as personalized study plans, progress tracking, and customizable preferences, ELMS empowers students to tailor their learning experience to suit their individual needs and preferences.
 
+## Technology Stack
+- **Frontend:** HTML, Cascading Style Sheets (CSS), JavaScript, jQuery
+  
 ## Conclusion
 Empowering Learning Management System (ELMS) is more than just a platform—it's a catalyst for academic excellence. By leveraging cutting-edge technology and a user-centric approach, ELMS redefines how students engage with their studies. Join us on this journey towards empowerment, accessibility, and academic success. Welcome to Empowering Learning—where learning knows no bounds.
